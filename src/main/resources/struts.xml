@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- namespace:一级路径 -->
+	<package name="demo" namespace="/demo" extends="struts-default">
+		<!-- name:二级路径 -->
+		<action name="hello" class="com.cn.action.DemoAction">
+			<!-- name:返回的字符串 用于处理返回值 -->
+			<result name="msg">/WEB-INF/msg.jsp</result>
+		</action>
+		<action name="test" method="test" class="com.cn.action.DemoAction">
+			<result name="success">/WEB-INF/msg.jsp</result>
+		</action>
+		
+		<action name="param" class="com.cn.action.ParamAction">
+			<result name="success">/WEB-INF/msg.jsp</result>
+		</action>
+	</package>
+</struts>
